@@ -7,7 +7,6 @@ const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
   }
 });
 
-
 const Home = ({data}) => {
   console.log('Data is', data);
   return <div>Home</div>;
