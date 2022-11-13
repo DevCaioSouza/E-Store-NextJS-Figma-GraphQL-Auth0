@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from './footer';
-import MainNavigation from './mainnavigation';
+import Footer from './Footer';
+import MainNavigation from './MainNavigation';
 
 const Layout = props => {
   return (
