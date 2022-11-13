@@ -1,15 +1,20 @@
-import { GraphQLClient } from 'graphql-request';
-const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
-  headers: {
-    Authorization:
-      `Bearer ${process.env.GRAPHCMS_TOKEN}`
-  }
-}
+import { GraphQLClient, gql } from 'graphql-request';
+
+// const hygraph = new GraphQLClient('https://api-sa-east-1.hygraph.com/v2/cla4l82233p5v01uk9nzlhcy6/master', {
+//   headers: {
+//     Authorization:
+//       `Bearer ${process.env.GRAPHCMS_TOKEN}`
+//   }
+// });
+
+const hygraph = new GraphQLClient(
+  'https://api-sa-east-1.hygraph.com/v2/cla4l82233p5v01uk9nzlhcy6/master'
 );
 
 
-const Home = () => {
-  return <div>Home</div>
+const Home = ({data}) => {
+  console.log('Data is', data);
+  return <div>Home</div>;
 };
 
 export default Home;
@@ -91,7 +96,7 @@ const MyQuery = gql`
 `
 
 export async function getServerSideProps() {
-  const data = await graphcms.request(MyQuery)
+  const data = await hygraph.request(MyQuery)
 
   return {
     props: {
