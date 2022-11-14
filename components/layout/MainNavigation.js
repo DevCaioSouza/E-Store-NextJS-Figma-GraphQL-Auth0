@@ -5,6 +5,27 @@ import styled from 'styled-components'
 
 const Navigation = styled.div`
   background-color: #004695;
+  .topHeader{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12%;
+    height: 7rem;
+    align-items: center;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    ul{
+      li{
+        color: #e9edf2;
+        list-style: none;
+      }
+    }
+    .cartWrapper{
+      padding-left: 3rem;
+    }
+  }
 `
 
 const MainNavigation = () => {
