@@ -1,4 +1,5 @@
 import { GraphQLClient, gql } from 'graphql-request';
+import TopBar from '../components/productSection/TopBar';
 
 const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
   headers: {
@@ -9,7 +10,12 @@ const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
 
 const Home = ({data}) => {
   console.log('Data is', data);
-  return <div>Home</div>;
+  return (
+    <div>
+      <TopBar />
+      Home
+    </div>
+  )
 };
 
 export default Home;

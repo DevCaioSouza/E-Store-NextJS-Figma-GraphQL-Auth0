@@ -5,7 +5,6 @@ const FooterStyled = styled.footer`
   background-color: #004695;
   display: flex;
   justify-content: center;
-  position: relative;
   margin-top: auto;
 
   p{
