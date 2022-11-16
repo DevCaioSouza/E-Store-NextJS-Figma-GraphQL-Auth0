@@ -1,5 +1,7 @@
 import { GraphQLClient, gql } from 'graphql-request';
 import TopBar from '../components/productSection/TopBar';
+import styled from 'styled-components';
+import MenuList from '../components/menuList/MenuList';
 
 const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
   headers: {
@@ -8,13 +10,24 @@ const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
   }
 });
 
-const Home = ({data}) => {
+const HomeStyle = styled.div`
+  
+`
+
+const Home = ({ data }) => {
   console.log('Data is', data);
   return (
-    <div>
-      <TopBar />
-      Home
-    </div>
+    <HomeStyle>
+      <div className='menu'>
+        <MenuList />
+      </div>
+      <div className='mainProductSection'>
+        <TopBar />
+        <div className='productCardsLayout'>
+
+        </div>
+      </div>
+    </HomeStyle>
   )
 };
 
