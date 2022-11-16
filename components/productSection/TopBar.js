@@ -1,7 +1,20 @@
 import styled from 'styled-components'
 
 const StyledTopBar = styled.div`
-  background-color: #004695;
+
+.sectionTitle {
+    background-color: #004695;
+    text-align: center;
+
+    .menuTitle{
+      h3{
+        color: #e9edf2;
+        font-weight: 350;
+        letter-spacing: 0.05rem;
+        padding: 0.3rem 0;
+      }
+    }
+  }
 `
 
 const TopBar = () => {
