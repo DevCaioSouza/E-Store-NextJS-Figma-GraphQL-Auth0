@@ -6,10 +6,9 @@ import styled from 'styled-components'
 const Navigation = styled.div`
   background-color: #004695;
   .topHeader{
-    border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    padding: 0 12%;
+    padding: 0 10%;
     height: 7rem;
     align-items: center;
   }
@@ -34,7 +33,7 @@ const MainNavigation = () => {
       <div className='topHeader'>
         <div className='imageWrapper'>
           <Link href="/">
-            <Image src="/logo.png" height={80} width={240} alt="logo" />
+            <Image src="/svg.svg" height={80} width={240} alt="logo" />
           </Link>
         </div>
         <nav>

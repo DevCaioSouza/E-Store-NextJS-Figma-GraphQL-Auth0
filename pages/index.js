@@ -11,7 +11,13 @@ const hygraph = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT, {
 });
 
 const HomeStyle = styled.div`
-  
+  display: flex;
+  gap: 5%;
+  padding: 0 10%;
+
+  .mainProductSection{
+    width: 100%;
+  }
 `
 
 const Home = ({ data }) => {
@@ -23,9 +29,7 @@ const Home = ({ data }) => {
       </div>
       <div className='mainProductSection'>
         <TopBar />
-        <div className='productCardsLayout'>
-
-        </div>
+        <div className='productCardsLayout'>Home</div>
       </div>
     </HomeStyle>
   )
