@@ -9,6 +9,7 @@ const StyledMenu = styled.div`
   .menuSection{
     min-width: 14.5rem;
     max-width: 14.5rem;
+    margin-bottom: 2rem;
     p{
       padding: 0.2rem 0 0.2rem 0.8rem;
       border: solid 1px #d3dce5;
