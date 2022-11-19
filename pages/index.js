@@ -21,7 +21,7 @@ const HomeStyle = styled.div`
 `
 
 const Home = ({ data }) => {
-  console.log('Data is', data);
+  // console.log('Data is', data);
   return (
     <HomeStyle>
       <div className='menu'>
